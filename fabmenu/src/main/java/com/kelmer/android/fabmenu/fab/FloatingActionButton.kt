@@ -49,11 +49,16 @@ class FloatingActionButton @JvmOverloads constructor(
     private var icon: Drawable? = null
 
 
-    private var colorNormal: Int
-    private var colorPressed: Int
-    private var colorDisabled: Int
-    private var colorRipple: Int
-    private var colorReveal: Int
+    var colorNormal: Int
+        private set
+    var colorPressed: Int
+        private set
+    var colorDisabled: Int
+        private set
+    var colorRipple: Int
+        private set
+    var colorReveal: Int
+        private set
 
 
     private var currentColor: Int
@@ -431,7 +436,7 @@ class FloatingActionButton @JvmOverloads constructor(
     private fun getLabelView(): TextView? = getTag(R.id.fab_label) as? Label
 
 
-    internal fun setColors(colorNormal: Int, colorPressed: Int, colorRipple: Int) {
+    fun setColors(colorNormal: Int, colorPressed: Int, colorRipple: Int) {
         this.colorNormal = colorNormal
         this.currentColor = colorNormal
         this.colorPressed = colorPressed
