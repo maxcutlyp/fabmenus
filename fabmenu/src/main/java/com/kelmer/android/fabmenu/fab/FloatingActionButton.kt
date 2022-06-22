@@ -443,6 +443,12 @@ class FloatingActionButton @JvmOverloads constructor(
         this.colorRipple = colorRipple
     }
 
+    fun setColorsWithoutSettingCurrentColor(colorNormal: Int, colorPressed: Int, colorRipple: Int) {
+        this.colorNormal = colorNormal
+        this.colorPressed = colorPressed
+        this.colorRipple = colorRipple
+    }
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     fun onActionDown() {
 
